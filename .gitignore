@@ -1,0 +1,5 @@
+forestfires.csv
+data_prep.ipynb
+forest_model.py
+processed_forestfire_data.csv
+flask_venv/

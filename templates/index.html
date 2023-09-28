@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest Fire Detection Model</title>
+  <!-- Link to Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS for additional styling -->
+  <style>
+    body {
+      background-color: #e5e4e4;
+      color: #fff;
+    }
+    h4 {
+        color: #000000;
+    }
+    .container {
+      margin-top: 70px;
+      max-width: 900px;
+      border-radius: 20px;
+      background-color: #f16969;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      padding: 80px;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #1c3539;
+      border-color: #19444b;
+    }
+    .btn-primary:hover {
+      background-color: #138496;
+      border-color: #138496;
+    }
+    </style>
+  </head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center mb-4">Forest Fire Detection Model</h2>
+    <form action='/predict' method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+         <label for="inputTemp">Temperature</label>
+         <input type="text" class="form-control" name="temp" id="inputTemp" placeholder="Enter the temperature" required>
+        </div>
+        <div class="form-group col-md-4">
+         <label for="inputHumid">Humidity</label>
+         <input type="text" class="form-control" name="humidity" id="inputHumid" placeholder="Enter humidity levels" required >
+        </div>
+        <div class="form-group col-md-4">
+         <label for="inputWind">Wind speed</label>
+         <input type="text" class="form-control" name="wind_speed" id="inputWind" placeholder="Enter wind speed" required>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-primary btn-lg">Predict Probability</button>
+      </div>
+    </form>
+    <div class="text-center mt-3">
+    </div<br>
+    <h4><b>{{pred}}</b></h4> <br>
+    </div>
+  </div>
+  </div>
+
+ 
+
+  <!-- Link to Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
