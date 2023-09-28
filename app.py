@@ -29,9 +29,9 @@ def predict():
     print(output)
 
     if output >= 0.5:
-        return render_template('index.html', pred=f'Forest is in Danger. \nProbability of forest fire is {output}%')
+        return render_template('index.html', pred=f'Forest is in Danger. Probability of forest fire is {output}%')
     else:
-        return render_template('index.html', pred=f'Forest is safe. \nPorbability of forest fire is {output}%')
+        return render_template('index.html', pred=f'Forest is safe. Porbability of forest fire is {output}%')
 
 if __name__ == 'main':
     app.run(host='0.0.0.0', port=8000,debug=True)
